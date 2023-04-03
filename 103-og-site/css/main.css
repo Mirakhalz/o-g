@@ -1,0 +1,206 @@
+/***** BASE STYLE *****/
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/***** OG SITE MAIN *****/
+
+body {
+    font-family: monospace;
+}
+
+header {
+  color:whitesmoke;
+  left: 0;
+  padding: 1em;
+  position: fixed;
+  text-decoration: none;
+  top: 0;
+  width: 100%;
+}
+
+/** POSSIBLE ANIMATION **/
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 a{
+  color: inherit;
+  text-decoration: none;
+}
+
+h1{
+  color: #484848;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer;
+  float: left;
+  position: relative; 
+  z-index: 2;
+}
+
+h1 span{
+  transition: .5s linear
+}
+h1:hover span:nth-child(1){
+  margin-right: 5px
+}
+
+h1:hover span:nth-child(2){
+  margin-left: 30px
+}
+h1:hover span{
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgb(255, 255, 255),
+              0 0 20px rgb(6, 29, 242), 
+              0 0 40px rgb(3, 198, 247);
+}
+
+/***** FOOTER FADE OUT JOURNEY ******/
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    float:left;
+    clear:both;
+  }
+  
+#footer p {
+    animation: animate 8s linear infinite;
+    background: linear-gradient(90deg, #000, rgb(30, 34, 244), #000);
+    background-repeat:space;
+    background-size: 80%;
+    bottom: 0px;
+    clear: both;
+    font-family: monospace;
+    font-size: 2em;
+    height: 30px;
+    left: 0px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    padding-bottom: 50px;
+    position: fixed;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(43, 253, 165, 0);
+    width: 100%;
+    
+  }
+  
+@keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+}
+
+/***** CURSOR STYLE *****/
+
+body {
+    cursor: url;
+}
+#cursor{
+    background:rgb(246, 228, 255);    
+    border-radius: 50%;
+    box-shadow: 
+              0 0 50px 25px #fff,
+              0 0 90px 50px #f0f,
+              0 0 120px 50px rgb(1, 254, 254);
+    display: none;
+    position: absolute;
+    height: 15px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    -webkit-filter: blur(6px);
+    width: 15px;
+}
+
+/***** ABOUT ME OG *****/
+
+div .top-section,
+div .middle-section,
+div .bottom-section {
+  color: #484848; 
+  font-family: monospace;
+}
+
+h1 .about {
+    line-height: 80px;
+    padding: 100px ;
+    width: 1000px;
+}
+
+p {
+  color: #484848;
+  font-size: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin: 0 auto; 
+  text-align: justify;
+}
+
+div .top-section {
+  color: #484848;
+  font-size: 25px;
+  margin: 0 auto;
+  overflow: auto;
+  width: 1200px;
+}
+
+div .bottom-section {
+  clear: both;
+  color: #484848;
+  float: left;
+  font-size: 20px;
+  margin: auto;
+  padding: auto;
+}
+
+h3 {
+  padding-left: 100px;
+  
+}
+#footer {
+  clear:both;
+  float:left;
+  font-family: monospace, 'Courier New', Courier, monospace;
+  font-size: 15px;
+  padding-left: 100px;
+  padding-right:100px;
+
+}
+
+/***** slow line *****/
+
+#dot-line {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
